@@ -152,12 +152,17 @@ export class WebpackConfig {
     new ExtractTextPlugin({ filename: 'css/[name].css', disable: !IS_PRODOCTION }),
     //https://webpack.js.org/plugins/commons-chunk-plugin/#components/sidebar/sidebar.jsx
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
+    //https://github.com/jantimon/html-webpack-plugin#configuration
     new HtmlWebpackPlugin({
       title: 'title',
       filename: `index.html`,
       template: path.join(SOURCE_PATH, `template.ejs`),
-      inject: IS_PRODOCTION ? false : 'body',
-      minify: {}, //https://github.com/kangax/html-minifier#options-quick-reference
+      inject: 'body',
+      //https://github.com/kangax/html-minifier#options-quick-reference
+      minify: IS_PRODOCTION ? {
+        minifyCSS: true,
+        minifyJS: true
+      } : false,
       hash: true, //if true then append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.
       cache: true, //true (default) try to emit the file only if it was changed.
       showErrors: true, // if true (default) errors details will be written into the HTML page.
