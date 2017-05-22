@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import 'normalize.css';
 import './index.less';
@@ -18,7 +18,7 @@ class About extends React.Component<any, any>{
   }
 }
 
-class App extends React.Component<any, any>{
+class Home extends React.Component<any, any>{
   render() {
     return (
       <div>
@@ -30,11 +30,19 @@ class App extends React.Component<any, any>{
     )
   }
 }
+
+const NoMatch = () => (
+  <div>
+    <h2>Not Found</h2>
+  </div>
+);
+
 ReactDOM.render(
   <Router>
-    <div>
-      <Route exact={true} path="/" component={App} />
+    <Switch>
+      <Route exact={true} path="/" component={Home} />
       <Route path="/about" component={About} />
-    </div>
+      <Route component={NoMatch} />
+    </Switch>
   </Router>,
   document.getElementById('root'));
