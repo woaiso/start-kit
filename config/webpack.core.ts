@@ -24,7 +24,10 @@ const sourceMapEnable = IS_PRODOCTION ? false : true
 export class WebpackConfig {
   cache = true
   devtool = sourceMapEnable ? 'source-map' as 'source-map' : false
-  entry = 'index.tsx'
+  entry = {
+    main: 'index.tsx',
+    vendor: [ 'react', 'react-dom', 'react-router-dom' ]
+  }
   output = {
     path: BUILD,
     filename: '[name].js',
