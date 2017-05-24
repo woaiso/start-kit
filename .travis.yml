@@ -1,0 +1,11 @@
+nguage: node_js
+node_js:
+  - "node"
+script:
+  - yarn run test
+  - yarn run build
+branches:
+  only:
+    - master
+cache:
+  yarn: true
