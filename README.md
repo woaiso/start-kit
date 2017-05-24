@@ -1,6 +1,6 @@
 start-kit
 ======
-[![Build Status](https://travis-ci.org/woaiso/start-kit.svg?branch=master)](https://travis-ci.org/woaiso/start-kit)[![coverage](https://codecov.io/gh/woaiso/start-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/woaiso/start-kit)
+[![Build Status](https://travis-ci.org/woaiso/start-kit.svg?branch=master)](https://travis-ci.org/woaiso/start-kit) [![coverage](https://codecov.io/gh/woaiso/start-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/woaiso/start-kit) ![](https://david-dm.org/woaiso/start-kit.svg)
 
 初始化项目
 
