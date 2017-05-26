@@ -27,7 +27,7 @@ module.exports = {
     "block-opening-brace-newline-after": "always-multi-line",
     "block-opening-brace-space-after": "always-single-line",
     "block-opening-brace-space-before": "always",
-    "color-hex-case": "lower",
+    "color-hex-case": "upper",
     "color-hex-length": "short",
     "color-no-invalid-hex": true,
     "comment-empty-line-before": [
