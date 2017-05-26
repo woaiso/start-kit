@@ -94,6 +94,8 @@ export class WebpackConfig {
             {
               loader: 'css-loader',
               options: {
+                modules: true,
+                localIdentName: IS_PRODOCTION ? '[hash:base64:5]' : '[name]__[local]___[hash:base64:5]',
                 sourceMap: sourceMapEnable,
                 importLoaders: 1,
                 minimize: false
