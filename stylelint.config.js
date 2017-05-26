@@ -76,19 +76,6 @@ module.exports = {
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-colon-space-after": "always-single-line",
     "declaration-colon-space-before": "never",
-    "declaration-empty-line-before": [
-      "always",
-      {
-        "except": [
-          "after-declaration",
-          "first-nested"
-        ],
-        "ignore": [
-          "after-comment",
-          "inside-single-line-block"
-        ]
-      }
-    ],
     "font-family-no-duplicate-names": true,
     "function-calc-no-unspaced-operator": true,
     "function-comma-newline-after": "always-multi-line",
