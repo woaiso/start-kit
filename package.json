@@ -48,7 +48,7 @@
     "jest-cli": "^20.0.4",
     "less": "^2.7.2",
     "less-loader": "^4.0.2",
-    "postcss-cssnext": "^2.10.0",
+    "postcss-cssnext": "^3.0.0",
     "postcss-import": "^10.0.0",
     "postcss-less": "^1.0.0",
     "postcss-loader": "^2.0.5",
