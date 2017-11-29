@@ -49,7 +49,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.2",
     "postcss-cssnext": "^3.0.0",
-    "postcss-import": "^10.0.0",
+    "postcss-import": "^11.0.0",
     "postcss-less": "^1.0.0",
     "postcss-loader": "^2.0.5",
     "postcss-modules": "^1.0.0",
