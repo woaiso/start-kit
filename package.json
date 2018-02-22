@@ -44,7 +44,7 @@
     "file-loader": "^1.0.0-rc.0",
     "html": "^1.0.0",
     "html-webpack-plugin": "^2.28.0",
-    "jest": "^21.0.0",
+    "jest": "^22.0.0",
     "less": "^3.0.0",
     "jest-cli": "^22.0.0",
     "less-loader": "^4.0.2",
