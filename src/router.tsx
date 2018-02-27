@@ -7,11 +7,13 @@ import Home from './page/home';
 export const Link = ReactLink;
 
 export default () => (
-  <Router>
-    <Switch>
-      <Route exact={true} path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route component={NotFound} />
-    </Switch>
-  </Router>
+  <div>
+    <Router>
+      <Switch>
+        <Route exact={ true } path="/" component={ Home } />
+        <Route path="/about" component={ About } />
+        <Route component={ NotFound } />
+      </Switch>
+    </Router>
+  </div>
 );
