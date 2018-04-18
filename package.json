@@ -57,7 +57,7 @@
     "react-hot-loader": "next",
     "source-map-loader": "^0.2.0",
     "stats-webpack-plugin": "^0.6.0",
-    "style-loader": "^0.20.0",
+    "style-loader": "^0.21.0",
     "stylefmt": "^6.0.0",
     "stylelint": "^9.0.0",
     "stylelint-config-standard": "^18.1.0",
