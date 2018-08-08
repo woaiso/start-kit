@@ -51,7 +51,7 @@
     "postcss-cssnext": "^3.0.0",
     "postcss-import": "^11.0.0",
     "postcss-less": "^1.0.0",
-    "postcss-loader": "^2.0.5",
+    "postcss-loader": "^3.0.0",
     "postcss-modules": "^1.0.0",
     "postcss-pxtorem": "^4.0.0",
     "react-hot-loader": "next",
