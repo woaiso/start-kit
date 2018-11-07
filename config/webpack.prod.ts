@@ -39,11 +39,6 @@ class WebpackProd {
       'process.env': {
         'NODE_ENV': JSON.stringify(NODE_ENV)
       }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: IS_PRODOCTION ? {
-        warnings: false
-      } : false
     })
   ]
   stats = {
