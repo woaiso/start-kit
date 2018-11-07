@@ -2,7 +2,7 @@
  * webpack 基础Core配置
  */
 import { CWD, BUILD, CWD_NODE_MODULES, NODE_MODULES, SOURCE_PATH, STATIC_PATH } from './path';
-import { IS_PRODOCTION } from './env';
+import { IS_PRODOCTION, NODE_ENV } from './env';
 import babelConfig from './babel';
 import themeConfig from './../theme';
 import entrys from './entry';
@@ -23,6 +23,7 @@ const sourceMapEnable = IS_PRODOCTION ? false : true
 
 export class WebpackConfig {
   cache = true
+  mode = NODE_ENV
   devtool = sourceMapEnable ? 'source-map' as 'source-map' : false
   entry = {
     main: 'index.tsx',
@@ -57,7 +58,7 @@ export class WebpackConfig {
     rules: [
       {
         test: /\.(tsx|ts)?$/,
-        loader: IS_PRODOCTION ? [ babelLoader, 'ts-loader?logLevel=error' ] : [ 'react-hot-loader/webpack', babelLoader, 'ts-loader?logLevel=error' ]
+        loader: IS_PRODOCTION ? [ babelLoader, 'ts-loader?logLevel=error' ] : [ babelLoader, 'ts-loader?logLevel=error' ]
       },
       {
         exclude: /(node_modules|bower_components)/,
@@ -155,8 +156,6 @@ export class WebpackConfig {
   }
   plugins = [
     new ExtractTextPlugin({ filename: 'css/[name].css', disable: !IS_PRODOCTION }),
-    //https://webpack.js.org/plugins/commons-chunk-plugin/#components/sidebar/sidebar.jsx
-    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
     //https://github.com/jantimon/html-webpack-plugin#configuration
     new HtmlWebpackPlugin({
       title: 'title',
@@ -177,4 +176,27 @@ export class WebpackConfig {
       xhtml: false //If true render the link tags as self-closing, XHTML compliant. Default is false
     })
   ]
+  optimization =  {
+    splitChunks: {
+      chunks: 'async',
+      minSize: 30000,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    }
+  }
 }

@@ -3,13 +3,8 @@ const babelConfig = {
 	compact: true,
 	cacheDirectory: true,
 	presets: [
-		[ 'es2015',
-			{
-				"modules": false
-			}
-		],
-		'stage-0',
-		'react',
+    '@babel/preset-env',
+		'@babel/react',
 	],
 	plugins: [
 
