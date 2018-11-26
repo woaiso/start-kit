@@ -6384,9 +6384,15 @@ postcss-less@^0.14.0:
   dependencies:
     postcss "^5.0.21"
 
-postcss-less@^3.0.1, postcss-less@^3.0.2:
+postcss-less@^3.0.1:
   version "3.0.2"
   resolved "http://registry.npm.taobao.org/postcss-less/download/postcss-less-3.0.2.tgz#9cf94e2cc90f8566858939e278fb9f0b713908df"
+  dependencies:
+    postcss "^7.0.3"
+
+postcss-less@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-less/-/postcss-less-3.1.0.tgz#0e14a80206b452f44d3a09d082fa72645e8168cc"
   dependencies:
     postcss "^7.0.3"
 
