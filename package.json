@@ -94,7 +94,7 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
-    "react": "^16.6.0",
+    "react": "^16.13.0",
     "react-dom": "^16.6.0",
     "react-router-dom": "^5.0.0",
     "rxjs": "^6.3.3"
