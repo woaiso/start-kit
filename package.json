@@ -78,7 +78,7 @@
     "stats-webpack-plugin": "^0.7.0",
     "style-loader": "^0.23.1",
     "stylefmt": "^6.0.3",
-    "stylelint": "^10.0.0",
+    "stylelint": "^13.3.3",
     "stylelint-config-standard": "^18.2.0",
     "ts-jest": "^24.0.0",
     "ts-loader": "^5.2.2",
