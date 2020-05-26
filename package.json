@@ -74,7 +74,7 @@
     "postcss-modules": "^1.4.1",
     "postcss-pxtorem": "^4.0.1",
     "react-hot-loader": "^4.0.0",
-    "source-map-loader": "^0.2.4",
+    "source-map-loader": "^1.0.0",
     "stats-webpack-plugin": "^0.7.0",
     "style-loader": "^0.23.1",
     "stylefmt": "^6.0.3",
